@@ -70,16 +70,43 @@
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.directory}/classes/ckeditor/optimized</outputDirectory>
+              <outputDirectory>${basedir}/src/main/resources/ckeditor/optimized/plugins</outputDirectory>
               <resources>
                 <resource>
-                  <directory>${basedir}/ckeditor-plugins/src/main/resources/ckeditor</directory>
+                  <directory>${basedir}/src/main/resources/ckeditor/plugins</directory>
                 </resource>
               </resources>
             </configuration>
           </execution>
         </executions>
       </plugin>
+      <!--  Todo : find out why minimize gives an error -->
+      <!--plugin>
+        <groupId>com.samaxes.maven</groupId>
+        <artifactId>minify-maven-plugin</artifactId>
+        <version>1.7.4</version>
+        <executions>
+          <execution>
+            <id>default-minify</id>
+            <phase>package</phase>
+            <configuration>
+              <charset>UTF-8</charset>
+              <webappSourceDir>${basedir}/src/main/resources/ckeditor/optimized</webappSourceDir>
+              <cssSourceDir>plugins</cssSourceDir>
+              <cssSourceIncludes>
+                <cssSourceInlcude>**/*.css</cssSourceInlcude>
+              </cssSourceIncludes>
+              <jsSourceDir>plugins</jsSourceDir>
+              <jsSourceIncludes>
+                <jsSourceInclude>**/*.js</jsSourceInclude>
+              </jsSourceIncludes>
+            </configuration>
+            <goals>
+              <goal>minify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin-->
     </plugins>
   </build>
 </project>
