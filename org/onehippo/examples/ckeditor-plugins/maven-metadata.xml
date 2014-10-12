@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>org.onehippo.examples</groupId>
-  <artifactId>hippo-ckeditor</artifactId>
+  <artifactId>ckeditor-plugins</artifactId>
   <versioning>
     <versions>
       <version>1.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20141012083147</lastUpdated>
+    <lastUpdated>20141012083155</lastUpdated>
   </versioning>
 </metadata>
